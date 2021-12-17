@@ -1,7 +1,11 @@
 import {Facebook, Instagram,  MailOutline, Phone, Pinterest, Room, Twitter,} from "@material-ui/icons";
 import styled from "styled-components";
+import { mobile } from "../responsive";
+
 const Container = styled.div`
   display: flex;
+  // ${mobile({flexDirection: "column"})}
+
 `;
 
 const Left = styled.div`
@@ -36,6 +40,8 @@ const SocialIcon = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+  // ${mobile({display: "none"})}
+
 `;
 
 const Title = styled.h3`
@@ -58,6 +64,7 @@ const ListItem = styled.li`
 const Right = styled.div`
   flex: 1;
   padding: 20px;
+  // ${mobile({backgroundColor: "lightgray"})}
 
 `;
 
@@ -74,9 +81,11 @@ const Footer = () => {
     return (
         <Container>
             <Left>
-                <Logo>DIALLO</Logo>
+                <Logo>DIALLO MART</Logo>
                 <Desc>
-                    这几天，Apache Log4j2 绝对是众多 Java 程序员提到的高频词之一：由于 Apache Log4j2 引发的严重安全漏洞，令一大批安全人员深夜修 Bug、发补丁。此次漏洞更是因为其触发简单、攻击难度低、影响人群广泛等特点，被许多媒体形容为“核弹级”漏洞。 </Desc>
+                    这几天，Apache Log4j2 绝对是众多 Java 程序员提到的高频词之一：
+                    由于 Apache Log4j2 引发的严重安全漏洞，令一大批安全人员深夜修 Bug、发补丁。此次漏洞更是因为其触发简单、攻击难度低、影响人群广泛等特点，被许多媒体形容为“核弹级”漏洞。
+                </Desc>
                 <SocialContainer>
                     <SocialIcon color="3B5999">
                         <Facebook />
@@ -110,13 +119,12 @@ const Footer = () => {
             <Right>
                 <Title>Contact</Title>
                 <ContactItem>
-                    <Room style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336
+                    <Room style={{marginRight:"10px"}}/> 216 Ningliu road, Pukou Nanjing 223001
                 </ContactItem>
                 <ContactItem>
-                    <Phone style={{marginRight:"10px"}}/> +1 234 56 78
-                </ContactItem>
+                    <Phone style={{marginRight:"10px"}}/> +86 13322702126                </ContactItem>
                 <ContactItem>
-                    <MailOutline style={{marginRight:"10px"}} /> contact@lama.dev
+                    <MailOutline style={{marginRight:"10px"}} /> oumardialo98@gmail.com
                 </ContactItem>
                 <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
             </Right>

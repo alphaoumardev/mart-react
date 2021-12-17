@@ -2,14 +2,14 @@ import { Add, Remove } from "@material-ui/icons";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-// import { mobile } from "../responsive";
+import Nav from "../components/Nav";
+import { mobile } from "../responsive";
 
 const Container = styled.div``;
 
 const Wrapper = styled.div`
   padding: 20px;
-  //${mobile({ padding: "10px" })}
+  ${mobile({ padding: "10px" })}
 `;
 
 const Title = styled.h1`
@@ -46,7 +46,7 @@ const TopText = styled.span`
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
-   //${mobile({ flexDirection: "column" })}
+  ${mobile({ flexDirection: "column" })}
 //
 `;
 
@@ -155,7 +155,7 @@ const Button = styled.button`
 const Cart = () => {
     return (
         <Container>
-            <Navbar />
+            <Nav />
             <Announcement />
             <Wrapper>
                 <Title>YOUR BAG</Title>
